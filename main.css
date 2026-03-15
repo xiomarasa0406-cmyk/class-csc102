@@ -1,0 +1,39 @@
+/* 
+declaration block:
+
+selector{
+    property: value;
+    property2: value;
+
+}
+ */
+
+/* xiomara sanchez 3/14/26 */
+body {
+    background-color: rgb(251, 216, 236);
+    color: #2395ff;
+}
+
+nav {
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer {
+   
+    text-align: center;
+    margin: 200px;
+}
+
+#memeImage {
+    margin-right: 200px;
+    width: 400px;
+    
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+}   
