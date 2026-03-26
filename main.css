@@ -14,14 +14,26 @@ body {
     color: #2395ff;
 }
 
-nav {
-    height: 600px;
-    width: 200px;
-    float: left;
-    padding: 5px;
-    line-height: 30px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f7b1f6;
 }
 
+li a {
+  display: block;
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #b3a4fb;
+  color: white;
+}
 footer {
    
     text-align: center;
@@ -35,5 +47,35 @@ footer {
 }
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }   
+hr {
+    border: 1px solid #2395ff;
+    margin: 20px 0;
+}
+ canvas {
+            border: 5px solid #cf09f6;
+            display: block;
+            margin: 20px auto;
+            background-color: #222;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            background-color: #ff008c;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff008c;
+
+        }
+        #game-container {
+    display: flex;
+    justify-content: center;
+} 
