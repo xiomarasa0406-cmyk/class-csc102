@@ -1,18 +1,18 @@
-// Change heading text when button is clicked
+// this is the text the button will change the heading to when you click it
 function updateText() {
     document.getElementById("heading").innerHTML = "JavaScript is fun!";
 }
-
+// this is the frst of the game code the game piece, the obstacles and the score
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-
+// here we have the game pice which is the red box and then the socre is the text that will show in the game
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
-
+// this is the game area where the game will be played and it will also update the gamearea and clear it and stop the game when you hit the obstacles
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -30,7 +30,7 @@ var myGameArea = {
         clearInterval(this.interval);
     }
 }
-
+// this is the component function that will create the game piece and the obstacles give it movement and collision detection.
 function component(width, height, color, x, y, type) {
     this.type = type;
     this.width = width;
@@ -39,6 +39,7 @@ function component(width, height, color, x, y, type) {
     this.speedY = 0;    
     this.x = x;
     this.y = y;    
+    // this is the update function that will update the game piece, obstacles and the score
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "text") {
@@ -54,6 +55,7 @@ function component(width, height, color, x, y, type) {
         this.x += this.speedX;
         this.y += this.speedY;        
     }
+    // this is the collision detection for the game piece and the obstacles if they hit each other the game will stop
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
@@ -70,7 +72,7 @@ function component(width, height, color, x, y, type) {
         return crash;
     }
 }
-
+// this is the update game area function that will update the gamearea and create the obstacles and move them and also update the score
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -79,6 +81,7 @@ function updateGameArea() {
             return;
         } 
     }
+    // this will clear the game area and then update the frame number and then create the obstacles and move them and also update the score
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
@@ -102,12 +105,12 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
-
+// this is the every interval function that will create the obstacles every 150 frames
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;
 }
-
+// these are the functions that will move the game piece up down left and right when you click the buttons and also stop the movement when you dont click the buttons
 function moveup() {
     myGamePiece.speedY = -2; 
 }
@@ -127,4 +130,24 @@ function moveright() {
 function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
+}
+function resetGame() {
+// this is the reset game function that will stop the game and clear everything.to start the game over and reset the score .
+    myGameArea.stop();
+
+    myGameArea.clear();
+   
+    myObstacles = [];
+   
+    myGameArea.frameNo = 0;
+    
+    myGamePiece.x = 10;
+    myGamePiece.y = 120;
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+    
+    myScore.text = "SCORE: 0";
+    myScore.update();
+
+    myGameArea.start();
 }

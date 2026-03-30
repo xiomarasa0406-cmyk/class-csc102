@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is the game page -->
     <title>Flying box-Mini Game</title>
     <link rel="stylesheet" href="main.css">
-    <script src="code.js" defer></script> <!-- JS loads after HTML -->
+    <script src="code.js" defer></script> 
     
 </head>
+<!-- the game well starts when you load the page -->
 <body onload="startGame()">
-    <ul>
+
+    <h1 id="heading">Welcome to Gameing box!</h1>
+    <!-- i made a new menu where all the other pages are linked -->
+      <ul>
   <li><a href="index.html">Home Page</a></li>
   <li><a href="boards.html">Boards Page</a></li>
   <li><a href="game.html">Game Page</a></li>
-</ul> 
-
-    <h1 id="heading">Welcome to Gameing box!</h1>
+</ul>   
+<!-- so this is the button to change the heading text -->
     <button onclick="updateText()">Change Heading Text</button>
-    <div id="game-container"></div>      
-    <!-- Game controls -->
+    <div id="game-container"></div>    
+  
+    <!-- game  controls -->
 <div style="text-align: center; margin-top: 20px;">
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
   <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+  <!-- this will be the reset button it well start the game over -->
+  <button onclick="resetGame()">Reset Game</button>
 </div>
 </body>
 </html>
