@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Page</title>
+     <link rel="stylesheet" href="main.css">
+    <script src="code.js" defer></script> 
+</head>
+<body>
+    <h1>Enter Your Information here!</h1>
+
+
+    <ul>
+  <li><a href="index.html">Home Page</a></li>
+  <li><a href="boards.html">Boards Page</a></li>
+  <li><a href="game.html">Game Page</a></li>
+  <li><a href="strings.html">Strings Page</a></li>
+</ul>  
+<h2> please enter your first name, last name, and zip code to see a secret message! </h2>
+   <!-- this is the form for the user to enter their information -->
+    <form onsubmit="return Form()">
+<!-- this is the first name input -->
+<hr3> First Name: <br><br>
+        <input type="text" id="firstName"><br><br>
+<!-- this is the last name input -->
+<hr3> Last Name: <br><br>
+        <input type="text" id="lastName"><br><br>
+<!-- this is the zip code input -->
+
+<hr3> Zip Code: <br><br>
+        <input type="text" id="zipCode"><br><br>
+<!-- this is the submit button and if everything is correct it will show the secret message and the easter gif -->
+        <input type="submit" value="See Secret Message">
+
+    </form>
+    <!-- this is the output paragraph where the secret message will be displayed without this the secret message will not be shown -->
+    <p id="output"></p>
+    <!-- this is the easter gif that will be displayed if the user enters the correct information -->
+   <img id="Gif" src="happy-easter-gif-3.gif" width="250" style="display:none;">
+</body>
+</html>

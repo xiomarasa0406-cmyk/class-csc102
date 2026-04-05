@@ -69,7 +69,7 @@ function component(width, height, color, x, y, type) {
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
         }
-        return crash;
+       return crash; 
     }
 }
 // this is the update game area function that will update the gamearea and create the obstacles and move them and also update the score
@@ -150,4 +150,36 @@ function resetGame() {
     myScore.update();
 
     myGameArea.start();
+}
+
+// Function to check the user input
+function Form() {
+
+    // Get values from inputs the first name, last name and zip code
+    let first = document.getElementById("firstName").value;
+    let last = document.getElementById("lastName").value;
+    let zip = document.getElementById("zipCode").value;
+
+    // i did this to combine first + last name
+    let fullName = first + last;
+
+    // i did this if the full name is more than 20 characters together it will reture as false and not show the secret message and 
+    // the easter gif.
+    if (fullName.length > 20) {
+        document.getElementById("output").innerHTML = "Name is too long Sorry!";
+        return false;
+    }
+// i did the same for the zip code but i also added isNaN to check if the zip code is a number or not if its not a number it will
+//  also return as false and not show the secret message and the easter gif.
+    // Check zip code (must be 5 digits)
+    if (zip.length !== 5 || isNaN(zip)) {
+        document.getElementById("output").innerHTML = "Zip code is invalid!";
+        return false; // stop
+    }
+
+    // If everything is okay, show secret message and the happy easter gif.
+    document.getElementById("output").innerHTML = "Good Job! You unlocked it! HAAPY EASTER! 🐰🥚 ";
+    document.getElementById("Gif").style.display = "block"; 
+
+    return false; // prevent page from refreshing
 }
