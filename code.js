@@ -161,7 +161,7 @@ function Form() {
     let zip = document.getElementById("zipCode").value;
 
     // i did this to combine first + last name
-    let fullName = first + last;
+    let fullName = first +"  "+ last;
 
     // i did this if the full name is more than 20 characters together it will reture as false and not show the secret message and 
     // the easter gif.
@@ -182,4 +182,46 @@ function Form() {
     document.getElementById("Gif").style.display = "block"; 
 
     return false; // prevent page from refreshing
+}
+// the startTop and startleft var control where the image starts on the screen. 
+var intervalidID = 0;
+var startTop = 100;
+var startleft = 100;
+// The dleft and dtop variables control how far the image
+var dleft = 5;
+var dtop = 5;
+// the startInterval function will start the interval that will move the image every 100 milliseconds
+//  and call the moveIT function to move the image.
+function startInterval()
+{
+    intervalidID = setInterval(moveIT, 100);
+}
+// this is where the moveIT function will move the image by changing the left and top style of the image and
+//  also check if the image hits the edge of the screen and if it does it will change the direction of the movement.
+function moveIT()
+{
+    // this is how we get the picture from the html and we can move it and then we set the left and top to the startleft and startTop
+    //  vriables to move it to the starting position.
+    var memeImage = document.getElementById("memeImage");
+
+    memeImage.style.position = "absolute";
+    memeImage.style.left = startleft + "px";
+    memeImage.style.top = startTop + "px";
+
+    document.getElementById("msg").innerHTML = "top: " + memeImage.style.top + " left: " + memeImage.style.left;
+// this is where we check if the image hits the edge of the screen and if it does it will change the direction.
+    if ((startleft + memeImage.width >= window.innerWidth) || (startleft <= 0))
+    {
+        dleft = -dleft;
+    }
+    if ((startTop + memeImage.height - 30 >= window.innerHeight) || (startTop <= 0))
+    {
+        dtop = -dtop;
+    }
+    startleft += dleft;
+    startTop += dtop;
+}
+function stopInterval()
+{
+    clearInterval(intervalidID);
 }
