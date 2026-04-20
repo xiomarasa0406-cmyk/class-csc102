@@ -27,16 +27,44 @@
 <hr3> Last Name: <br><br>
         <input type="text" id="lastName"><br><br>
 <!-- this is the zip code input -->
-
 <hr3> Zip Code: <br><br>
         <input type="text" id="zipCode"><br><br>
 <!-- this is the submit button and if everything is correct it will show the secret message and the easter gif -->
         <input type="submit" value="See Secret Message">
-
+<!-- xiomara 4/19/2026 -->
     </form>
     <!-- this is the output paragraph where the secret message will be displayed without this the secret message will not be shown -->
     <p id="output"></p>
     <!-- this is the easter gif that will be displayed if the user enters the correct information -->
-   <img id="Gif" src="happy-easter-gif-3.gif" width="250" style="display:none;">
+   <img id="Gif" src="yellow-bird-good-job-ovnjykzc78iex75s.gif" width="250" style="display:none;">
+<!-- to start making the palindrome checker -->
+<!-- the h2 tag show the under the title is where the checher will be -->
+ <br>
+ <br>
+   <h2>Palindrome Checker</h2>
+
+<hr>
+        <p>Type a word or phrase to see if it is a palindrome.</p>
+<!-- the form  for the checker the id is "palindrome" this will be used to target/link the form with JavaScript-->
+        <form id="palindrome">
+<!-- the input is the text box where the user will enter their word or phrase and the other input is the sumit button 
+ and well check the word if it is or not a palindrome -->
+            <input type="text" id="userWord" placeholder="Enter a word or phrase">
+
+            <input type="submit" value="Check Word">
+
+        </form>
+<!-- the div id will show the result of the javascript if its right or wrong to the user -->
+        <div id="result"></div>
+
+    </div>
+
+
+
+
+
+
+
+
 </body>
 </html>

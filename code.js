@@ -178,7 +178,7 @@ function Form() {
     }
 
     // If everything is okay, show secret message and the happy easter gif.
-    document.getElementById("output").innerHTML = "Good Job! You unlocked it! HAAPY EASTER! 🐰🥚 ";
+    document.getElementById("output").innerHTML = "Good Job! You unlocked it!";
     document.getElementById("Gif").style.display = "block"; 
 
     return false; // prevent page from refreshing
@@ -203,17 +203,19 @@ function moveIT()
     // this is how we get the picture from the html and we can move it and then we set the left and top to the startleft and startTop
     //  vriables to move it to the starting position.
     var memeImage = document.getElementById("memeImage");
-
+// this is where we set the position of the image so we can move it and then we set the left and top to the startleft and startTop
     memeImage.style.position = "absolute";
     memeImage.style.left = startleft + "px";
     memeImage.style.top = startTop + "px";
-
+// this is where we show the position of the image in the html so we can see it and check if its moving correctly.
     document.getElementById("msg").innerHTML = "top: " + memeImage.style.top + " left: " + memeImage.style.left;
 // this is where we check if the image hits the edge of the screen and if it does it will change the direction.
     if ((startleft + memeImage.width >= window.innerWidth) || (startleft <= 0))
     {
+        // this is where we change the direction of the movement by changing the sign.
         dleft = -dleft;
     }
+    // this is where we check if the image hits the edge of the screen and if it does it will change the direction of the image
     if ((startTop + memeImage.height - 30 >= window.innerHeight) || (startTop <= 0))
     {
         dtop = -dtop;
@@ -225,3 +227,31 @@ function stopInterval()
 {
     clearInterval(intervalidID);
 }
+// this is the palindrome checker code that is grabbing the from of the html
+  var form = document.getElementById("palindrome");
+// this is the onsubmit event that will trigger when the user submits its the action that will check the word
+    form.onsubmit = function (event) {
+        //this event is so we can check the palindrome without refreshing the page over and over to do a new word.
+        event.preventDefault();
+// this is where we get the word from the input and store it in a variable to check if its a palindrome or not.
+        var word = document.getElementById("userWord").value;
+
+
+        // Empty variable for reversed word
+        var reversedWord = "";
+
+        // Loop through the word backwards and add each letter to the reversedWord variable
+        // i is the index that starts at the last letter to the first letter and adds each letter to the other variable
+        for (var i = word.length - 1; i >= 0; i--) {
+            reversedWord = reversedWord + word[i];
+        }
+//  if the word matches the reversed word then it's a palindrome, otherwise it's not and it will show the result in the html.
+        // Check if the word matches the reversed word
+        if (word == reversedWord) {
+            document.getElementById("result").innerHTML = "This is a palindrome!";
+        }
+        else {
+            document.getElementById("result").innerHTML = "This is not a palindrome.";
+        }
+
+    };
