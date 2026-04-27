@@ -119,3 +119,7 @@ h3 {
     text-align: center;
     color: #2395ff;
 }
+audio {
+    display: block;
+    margin: 20px auto;
+}

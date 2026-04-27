@@ -20,11 +20,21 @@
   <li><a href="game.html">Game Page</a></li>
   <li><a href="strings.html">Strings Page</a></li>
 </ul>   
+<hr>
+
 <!-- so this is the button to change the heading text -->
     <button onclick="updateText()">Change Heading Text</button>
+    <!-- xiomara 4/27/2026 -->
+    <br>
+    <!-- this is audio you can play when playing the game -->
+    <audio controls>
+    <!-- This connects the sound file to the audio player -->
+    <source src="851901__josefpres__piano-loops-206-efect-octave-long-loop-120-bpm.wav" type="audio/mpeg">
+</audio>
     <div id="game-container"></div>    
   
     <!-- game  controls -->
+     <!-- every move has its own function -->
 <div style="text-align: center; margin-top: 20px;">
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
@@ -33,5 +43,6 @@
   <!-- this will be the reset button it well start the game over -->
   <button onclick="resetGame()">Reset Game</button>
 </div>
+<hr>
 </body>
 </html>
