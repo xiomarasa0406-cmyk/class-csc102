@@ -1,3 +1,4 @@
+<!-- xiomara sanchez -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,42 +9,44 @@
     <script src="code.js" defer></script> 
 </head>
 <body>
-    <h1>Enter Your Information here!</h1>
-
-
-    <ul>
+        <!-- this is the menu for the links to other pages and the footer -->
+         <h1>Welcome to the Strings Page!</h1>
+           <ul>
   <li><a href="index.html">Home Page</a></li>
   <li><a href="boards.html">Boards Page</a></li>
   <li><a href="game.html">Game Page</a></li>
   <li><a href="strings.html">Strings Page</a></li>
-</ul>  
-<h2> please enter your first name, last name, and zip code to see a secret message! </h2>
+</ul> 
+    <h2>Enter Your Information here!</h2>
+
+<h3> please enter your first name, last name, and zip code to see a secret message! </h3>
    <!-- this is the form for the user to enter their information -->
     <form onsubmit="return Form()">
 <!-- this is the first name input -->
-<hr3> First Name: <br><br>
-        <input type="text" id="firstName"><br><br>
+<p> First Name: </p><br>
+        <input type="text" id="firstName"><br>
 <!-- this is the last name input -->
-<hr3> Last Name: <br><br>
-        <input type="text" id="lastName"><br><br>
+<p> Last Name: </p><br>
+        <input type="text" id="lastName"><br>
 <!-- this is the zip code input -->
-<hr3> Zip Code: <br><br>
-        <input type="text" id="zipCode"><br><br>
+<p> Zip Code: </p><br>
+        <input type="text" id="zipCode"><br>
 <!-- this is the submit button and if everything is correct it will show the secret message and the easter gif -->
         <input type="submit" value="See Secret Message">
 <!-- xiomara 4/19/2026 -->
-    </form>
+
     <!-- this is the output paragraph where the secret message will be displayed without this the secret message will not be shown -->
      <p id="output"></p>
     <!-- this is the easter gif that will be displayed if the user enters the correct information -->
    <img id="Gif" src="yellow-bird-good-job-ovnjykzc78iex75s.gif" width="250" style="display:none;">
 <!-- to start making the palindrome checker -->
 <!-- the h2 tag show the under the title is where the checher will be -->
+ </form> 
+
  <br>
    <h2>Palindrome Checker</h2>
 
-<hr>
-        <p>Type a word or phrase to see if it is a palindrome.</p>
+ <h3>Type a word or phrase to see if it is a palindrome.</h3>
 <!-- the form  for the checker the id is "palindrome" this will be used to target/link the form with JavaScript-->
         <form id="palindrome">
 <!-- the input is the text box where the user will enter their word or phrase and the other input is the sumit button 
@@ -51,13 +54,13 @@
             <input type="text" id="userWord" placeholder="Enter a word or phrase">
 
             <input type="submit" value="Check Word">
-
+ <img id="gif" src="giphy.gif" width="250" style="display:none;">
         </form>
 <!-- the div id will show the result of the javascript if its right or wrong to the user -->
         <div id="result"></div>
 
 
-
+<!-- xiomara 4/27/2026 -->
 
 
 

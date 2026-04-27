@@ -10,7 +10,7 @@ selector{
 
 /* xiomara sanchez 3/14/26 */
 body {
-    background-color: rgb(251, 216, 236);
+    background-color: rgb(254, 194, 228);
     color: #2395ff;
 }
 /* so this the a menu i made for the links of the other pages */
@@ -19,7 +19,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 300px;
-  background-color: #f7b1f6;
+  background-color: #ffaafe;
 }
 /* this is the style for the links in the menu */
 li a {
@@ -53,6 +53,7 @@ h1 {
 hr {
     border: 1px solid #2395ff;
     margin: 20px 0;
+    
 }
 /* the game canvas is this code here  */
  canvas {
@@ -109,4 +110,12 @@ h2 {
     border: 1px solid #2395ff;
     margin: 20px 0;
     text-align: center;
+}
+h3 {
+    text-align: center;
+    color: #2395ff;
+}
+#result {
+    text-align: center;
+    color: #2395ff;
 }

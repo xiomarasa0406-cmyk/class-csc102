@@ -247,11 +247,18 @@ function stopInterval()
         }
 //  if the word matches the reversed word then it's a palindrome, otherwise it's not and it will show the result in the html.
         // Check if the word matches the reversed word
-        if (word == reversedWord) {
-            document.getElementById("result").innerHTML = "This is a palindrome!";
-        }
-        else {
-            document.getElementById("result").innerHTML = "This is not a palindrome.";
-        }
+      if (word == reversedWord) {
+    document.getElementById("result").innerHTML = "This is a palindrome!";
+
+    // show the gif is its a palindrome
+    document.getElementById("gif").style.display = "block";
+}
+else {
+    // if its not a palindrome show this message in the html
+    document.getElementById("result").innerHTML = "This is not a palindrome.";
+
+    // hide the gif if it's wrong
+    document.getElementById("gif").style.display = "none";
+}
 
     };
