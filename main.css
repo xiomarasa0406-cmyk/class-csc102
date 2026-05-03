@@ -10,36 +10,54 @@ selector{
 
 /* xiomara sanchez 3/14/26 */
 body {
-    background-color: rgb(254, 194, 228);
-    color: #2395ff;
+    background-color: rgb(255, 175, 240);
+    color: #000000;
 }
 /* so this the a menu i made for the links of the other pages */
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  background-color: #ffaafe;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 155px;
+    height: 35vh; 
+    background-color: #ff8dfd;
+    position: fixed; 
 }
-/* this is the style for the links in the menu */
+
+/* menu links */
 li a {
-  display: block;
-  color: black;
-  padding: 10px 18px;
-  text-decoration: none;
+    display: block;
+    color: black;
+    padding: 15px 18px;
+    text-decoration: none;
 }
 
-/* Change the link and background color on hover */
+/* hover effect */
 li a:hover {
-  background-color: #b3a4fb;
-  color: white;
-}
-footer {
-   
-    text-align: center;
-    margin: 200px;
+    background-color: #b3a4fb;
+    color: white;
 }
 
+/* this is the main content area */
+.content {
+    margin-left: 150px; 
+    padding: 20px;
+}
+
+/* the main heading */
+h1 {
+    margin-top: 0;
+    color: #4c7caf;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+/* the size of the meme image */
 #memeImage {
     margin-right: 200px;
     width: 400px;
@@ -49,8 +67,12 @@ footer {
 h1 {
     text-align: center;
     font-size: 60px;
+    color: #2395ff;
+    margin-top: 0px;
+    margin-left: 0px;
 }   
 hr {
+    /* the hr tag is a blake line that separates sections */
     border: 1px solid #2395ff;
     margin: 20px 0;
     
@@ -81,13 +103,16 @@ hr {
         #game-container {
     display: flex;
     justify-content: center;
+
 } 
 form {
+    /* the form tag shows a form for user input */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
 }
+/* the input tag shows a text input field */
 input[type="text"] {
     padding: 10px;
     margin: 10px;
@@ -106,20 +131,47 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #f504d1;
 }
+/* both h2 h3 tags are for headings */
 h2 {
     border: 1px solid #2395ff;
     margin: 20px 0;
     text-align: center;
+    color: #2395ff;
 }
 h3 {
     text-align: center;
     color: #2395ff;
+    font-size: 25px;
+    font-weight: 200;
 }
 #result {
     text-align: center;
     color: #2395ff;
 }
+/* the audio tag shows an audio player and how big it is  */
 audio {
     display: block;
     margin: 20px auto;
+}
+/* the table tag shows how it would look with borders, colors , and size */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}   
+ td {
+    border: 3px solid #5188ff;
+    padding: 15px;
+    text-align: center;
+}
+th {
+    background-color: #0837f1;
+    color: white;
+}   
+/* the p tag shows a paragraph of text */
+p {
+    text-align: center;
+    color: #2395ff;
+    font-size: 18px;
+    font-weight: 200;
 }

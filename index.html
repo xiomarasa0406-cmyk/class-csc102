@@ -12,16 +12,27 @@
      <script src="code.js" defer></script> 
 </head>
 <!-- the body tag shows the content of the page -->
+  
 <body>
-    <h1>Welcome to my CSC102 Home Page</h1>
+    <h1>Welcome to my Index Page</h1>
+
+    <button onclick="startInterval()" id ="startMove">Start</button>
+<br>
+<br> 
+<!-- Stop button -->
+<button onclick="stopInterval()" id="stopmove" >Stop</button>
     <!-- this the the nav section to hold the menu -->
-   <ul>
-  <li><a href="index.html">Home Page</a></li>
+   <hr> 
+   <br>
+    <ul>
+    <li><a href="home.html">Home Page</a></li>
+  <li><a href="index.html">Index Page</a></li>
   <li><a href="boards.html">Boards Page</a></li>
   <li><a href="game.html">Game Page</a></li>
  <li><a href="strings.html">Strings Page</a></li>
  
 </ul>
+   
 <br>
      <!-- the nav tag shows a navigation menu -->
  
@@ -33,10 +44,6 @@
 
     </p>
 <!-- Start button -->
-<button onclick="startInterval()" id ="startMove">Start</button>
-
-<!-- Stop button -->
-<button onclick="stopInterval()" id="stopmove" >Stop</button>
 
 <div id="msg"></div>
 
